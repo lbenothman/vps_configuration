@@ -24,6 +24,7 @@ globals=(
   jenkins
   mongodb-org
   phpmyadmin
+  nodejs
   npm
   php5-curl
   screen
@@ -43,18 +44,3 @@ function apt-install() {
 
 # Call the apt-install functions on the softwares list
 apt-install
-
-
-
-read -p "Would you like to install Node.js? [Y/N] " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-	# Instal NVM to install Node.js
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.27.1/install.sh | bash
-	echo "source ~/.nvm/nvm.sh" >> "${HOME}/.bashrc"
-	source ~/.profile
-	nvm install stable
-	source ~/.profile
-	# Fix the node.js and node issue in Ubuntu
-	ln -s /usr/bin/nodejs /bin/node
-fi;
