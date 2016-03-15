@@ -35,7 +35,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	# install MiniVim
 	sudo mkdir "${SOURCE_LOCATION}/Software-Repositories"
-	git clone https://github.com/sd65/MiniVim.git ~/${SOURCE_LOCATION}/MiniVim
+	git clone https://github.com/sd65/MiniVim.git ${SOURCE_LOCATION}/MiniVim
 	bash "${SOURCE_LOCATION}/Software-Repositories/MiniVim/install.sh"
 fi;
 
