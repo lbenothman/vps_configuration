@@ -26,7 +26,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
 	printf "${magenta}Cloning Required repositories...\n${NC}"
 
-	if [[ ! -d ${SOURCE_LOCATION}/bash-it ]]; then
+	if [[ ! -d ${HOME}/.bash_it ]]; then
 		git clone --depth=1 git@github.com:Bash-it/bash-it.git ~/.bash_it
 
 		# run the bash-it install script
@@ -34,9 +34,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 	fi
 
 	# install MiniVim
-	mkdir "${HOME}/Software-Repositories"
-	git clone https://github.com/sd65/MiniVim.git ~/Repositories
-	bash "${HOME}/Software-Repositories/MiniVim/install.sh"
+	mkdir "${SOURCE_LOCATION}/Software-Repositories"
+	git clone https://github.com/sd65/MiniVim.git ~/${SOURCE_LOCATION}/MiniVim
+	bash "${SOURCE_LOCATION}/Software-Repositories/MiniVim/install.sh"
 fi;
 
 

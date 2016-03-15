@@ -26,6 +26,7 @@ globals=(
   phpmyadmin
   npm
   php5-curl
+  screen
 )
 
 # Install apt modules
