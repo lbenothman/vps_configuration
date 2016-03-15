@@ -27,6 +27,7 @@ globals=(
   npm
   php5-curl
   screen
+  htop
 )
 
 # Install apt modules
